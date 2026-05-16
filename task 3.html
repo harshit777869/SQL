@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 3 - Migration</title>
+</head>
+<body style="text-align:center; font-family:Arial; margin-top:50px;">
+
+<h2>Task 3 - Database Migration</h2>
+
+<p>Source: MySQL</p>
+<p>Target: PostgreSQL</p>
+
+<button onclick="migrate()">Run Migration</button>
+
+<p id="out"></p>
+
+<script>
+function migrate() {
+  document.getElementById("out").innerText =
+    "✔ Data Exported → ✔ Data Imported → ✔ Integrity Verified";
+}
+</script>
+
+</body>
+</html>

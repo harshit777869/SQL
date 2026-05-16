@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CODTECH SQL Internship Dashboard</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px;
+      background: #4facfe;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .box {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background: #222;
+      border-radius: 10px;
+    }
+
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      width: 70%;
+    }
+
+    td, th {
+      border: 1px solid white;
+      padding: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>SQL Internship Tasks (Simulation)</h1>
+
+<button onclick="show(1)">Task 1 - Joins</button>
+<button onclick="show(2)">Task 2 - Analysis</button>
+<button onclick="show(3)">Task 3 - Migration</button>
+<button onclick="show(4)">Task 4 - Backup</button>
+
+<!-- TASK 1 -->
+<div id="t1" class="box">
+  <h2>Task 1 - JOIN Simulation</h2>
+
+  <table>
+    <tr><th>Emp</th><th>Dept</th></tr>
+    <tr><td>Amit</td><td>HR</td></tr>
+    <tr><td>Ravi</td><td>IT</td></tr>
+    <tr><td>Neha</td><td>Finance</td></tr>
+  </table>
+
+  <p>INNER / LEFT / RIGHT JOIN simulated result</p>
+</div>
+
+<!-- TASK 2 -->
+<div id="t2" class="box">
+  <h2>Task 2 - Window / CTE Simulation</h2>
+  <p>Employee Ranking:</p>
+  <p>Amit - Rank 1</p>
+  <p>Ravi - Rank 2</p>
+  <p>Neha - Rank 3</p>
+</div>
+
+<!-- TASK 3 -->
+<div id="t3" class="box">
+  <h2>Task 3 - Data Migration</h2>
+  <p>MySQL ➜ PostgreSQL</p>
+  <p>✔ Data Exported</p>
+  <p>✔ Data Imported</p>
+  <p>✔ Integrity Verified</p>
+</div>
+
+<!-- TASK 4 -->
+<div id="t4" class="box">
+  <h2>Task 4 - Backup & Recovery</h2>
+  <button onclick="backup()">Run Backup</button>
+  <button onclick="restore()">Restore</button>
+
+  <p id="out"></p>
+</div>
+
+<script>
+function show(n) {
+  document.querySelectorAll('.box').forEach(b => b.style.display = "none");
+  document.getElementById("t" + n).style.display = "block";
+}
+
+/* TASK 4 LOGIC */
+function backup() {
+  document.getElementById("out").innerText =
+    "Database Backup Created Successfully ✔";
+}
+
+function restore() {
+  document.getElementById("out").innerText =
+    "Database Restored Successfully ✔";
+}
+</script>
+
+</body>
+</html>
